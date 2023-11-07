@@ -20,7 +20,8 @@ RGB-D saliency detection mimics human attentional behavior by combining depth in
 ## Framework Overview
 The pipeline of CCINet is shown in the figure below. 
 
-![fig2high](https://github.com/jacker112/RGB-D-SOD/tree/main/PD-Net-main/paper_image/fig01.png)
+![fig01](https://github.com/jacker112/RGB-D-SOD/assets/148022707/189c9df7-9ac0-4842-b193-ca3c4a855927)
+
 
 
 ## Result
