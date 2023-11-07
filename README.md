@@ -51,40 +51,31 @@ tensorboardX==2.5
 
 opencv-python==4.5.5.64
 
-## Data Format
 
-trainset: COCO-SEG
+## Training
+If you want to retrain our network, we recommend that you follow these steps.
 
-testset: CoCA, CoSOD3k, Cosal2015
+1.Download the dataset and place it in the PD_dataset folder.[code:0617]https://pan.baidu.com/s/1PzjLo43pigzhCm-CxTyDIw
 
-Put the datasets ([gts](https://pan.baidu.com/s/1A0cklgxqK2yPtYI7GNY62Q?pwd=7xo7) and [imgs](https://pan.baidu.com/s/1Bf3HfdDWMiV4MIaHu2MJQQ?pwd=scub)) to `CCINet/data` as the following structure:
+2.Modify the training parameters of the model in options.py. Such as batchsize, gpu_id.
 
-```
-CCINet
-   ├── other codes
-   ├── ...
-   │ 
-   └── data
-         ├── gts
-              ├── CoCo-SEG (CoCo-SEG's gt files)
-         	  ├── CoCA (CoCA's gt files)
-              ├── CoSOD3k (CoSOD3k's gt files)
-              └── Cosal2015 (Cosal2015's gt files)
-         ├── images
-              ├── CoCo-SEG (CoCo-SEG's image files)
-         	  ├── CoCA (CoCA's image files)
-              ├── CoSOD3k (CoSOD3k's image files)
-              └── Cosal2015 (Cosal2015's image files)
-```
+3.Open a terminal and run python3 PDNet_train.py. The trained parameter model will be saved in the PDNet_cpts folder.
 
-## Trained model
+## Testing
+If you would like to reproduce our results, please follow these steps.
 
-trained model can be downloaded from [papermodel](https://pan.baidu.com/s/1R-isw86_4UrCGNo2T2ubSg?pwd=koy2).
+1.We provide a link to download the parameters of the trained model, put it in the model_pths folder.
 
-Run `test.py` for inference.
+2.Open a terminal and run python3 PDNet_test.py. 
 
-The evaluation tool please follow: https://github.com/zzhanghub/eval-co-sod
 
-## Reproduction
+## Evaluation
+If you would like to evaluate our entire model parameters through quantitative metrics, please follow these steps.
 
-reproductions by myself on RTX3090 can be found at [reproduction](https://pan.baidu.com/s/1R-isw86_4UrCGNo2T2ubSg?pwd=koy2).
+1.Download the results of our experiments and place them in any path.
+
+2.The evaluation metric code has been placed in the eval_code folder, please use MATLAB to open it.
+
+3.Modify the path to the dataset in main.m.
+
+4.run main.m.
