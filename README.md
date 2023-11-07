@@ -18,10 +18,9 @@ The official repo of the paper `Pluralistic depth-aware network for RGB-D salien
 RGB-D saliency detection mimics human attentional behavior by combining depth information and RGB information to locate the most salient regions in an image. Existing work usually samples the modification of the feature fusion module, thus neglecting the analysis of information extraction from the backbone network and the loss of feature information when the image is transformed at different scales. To address this issue, we propose a pluralistic depth-aware network (PDNet), which is dedicated to improving the feature information extraction ability of the backbone network and optimizing the depth image. In the encoding stage, we add pluralistic attention module (PA) to the backbone network, which enriches the high-level feature information and reduces the loss of information in the convolutional transform, which is a feature refinement process. In the stage of fusion of depth information and RGB information, we design the adaptive depth modification module (ADM), optimize the channel attention module, and develop the adaptive tuning function of attention for the characteristics of the channel transform ratio, which maximizes the depth filtering while retaining the uniqueness of the depth information. In the decoding stage, a depth-aware semantic extraction module (DSE) consisting of lightweight transformers is proposed to aggregate the high-level depth information and guide the low-level feature refinement through the lightweight transformers. The source code is available at https://github.com/jacker112/RGB-D-SOD.git.
 
 ## Framework Overview
-https://github.com/jacker112/RGB-D-SOD/tree/main/PD-Net-main/paper_imagez
 The pipeline of CCINet is shown in the figure below. 
 
-![fig2high](https://github.com/jacker112/RGB-D-SOD/tree/main/PD-Net-main/paper_image/fig01)
+![fig2high](https://github.com/jacker112/RGB-D-SOD/tree/main/PD-Net-main/paper_image/fig01.png)
 
 
 ## Result
